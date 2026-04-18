@@ -1,35 +1,6 @@
 ﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-h1 {
-  font-family: Open Sans, sans-serif;
-  font-weight: 900;
-  font-size: 78px;
-}
-
-h2 {
-  font-family: Open Sans, sans-serif;
-  font-weight: 900;
-  font-size: 60px;
-}
-
-h3 {
-  font-family: Open Sans, sans-serif;
-  font-weight: 900;
-  font-size: 40px;
-}
-
-h4 {
-  font-family: Open Sans, sans-serif;
-  font-weight: 900;
-  font-size: 32px;
-}
-
-h5 {
-  font-family: Open Sans, sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-}
 
 
 a.navbar-brand {
