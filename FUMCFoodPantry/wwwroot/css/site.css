@@ -67,8 +67,20 @@ body {
 }
 
 .navbar .nav-link {
-    font-size: 1.25rem;   
-    font-weight: 500;
+    -webkit-text-fill-color: #e9ecef;
+    font-size: 1.25rem;
+    padding: 8px 16px;
+    margin: 0 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color:#ae2724;
+    transition: all 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #e9ecef;
+    border-color: #999;
+    -webkit-text-fill-color: #ae2724;
 }
 
 .navbar-brand {
