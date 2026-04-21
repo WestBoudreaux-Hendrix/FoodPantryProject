@@ -1,0 +1,38 @@
+@page
+@using RazorPagesMovie.Pages
+@model StaffLogInModel
+@{
+    ViewData["Title"] = "Application for Assistance";
+}
+
+<head>
+    <title>Application for Assistance</title>
+</head>
+
+<body>
+    <div class="container-fluid pt-5 text-center">
+    <h3>@ViewData["Title"]</h3>
+    </div>
+
+<div class="col text-left p-3">
+    <div class="mb-3">
+        <input type="lastName" placeholder="Last Name">
+        <input type="firstName" placeholder="First Name">
+        <input type="middle" placeholder="Middle">
+    </div>
+    <div class="mb-3">
+        <input type="address" placeholder="Address">
+        <input type="city" placeholder="City">
+        <input type="state" placeholder="State">
+        <input type="zip" placeholder="Zip Code">
+    </div>
+    <div class="mb-3">
+        <input type="phone" placeholder="Phone #"> 
+    </div>
+    <div class="mb-3 d-flex">
+        <p>How many Household members are employed?</p>
+        <input type="numEmployed" style="width: 50px; height: 30px; margin-left: 10px;">
+    </div>
+    <p>[[Work in Progress...]]</p>
+</div>
+</body>
