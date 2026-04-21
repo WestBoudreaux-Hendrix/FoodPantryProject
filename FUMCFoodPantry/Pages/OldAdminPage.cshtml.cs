@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FUMCFoodPantry.Pages;
 
-public class AdminPage : PageModel
+public class OldAdminPage : PageModel
 {
     public void OnGet()
     {

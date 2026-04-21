@@ -14,5 +14,6 @@ namespace FUMCFoodPantry.Data
         }
 
         public DbSet<Stock> Stock { get; set; } = default!;
+        public DbSet<User> User { get; set; } = default!;
     }
 }

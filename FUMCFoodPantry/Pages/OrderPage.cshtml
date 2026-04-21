@@ -1,5 +1,5 @@
 @page
-@model AdminPage
+@model Order
 @{
     ViewData["Title"] = "Order Page";
 }
@@ -10,11 +10,20 @@
 <html>
 <head>
 <style>
-    
+  label{
+    font-size: 24px;
+    }
+
+
+.OrderForm {
+    width: 100%;
+    max-width: 500px; 
+}  
 
 </style>
 </head>
 <body>
+<div class="OrderForm">
 <div>
 <label for="Tier 1">Choose Tier 1 item:</label>
 </div>
@@ -56,5 +65,9 @@
 </select>
 </div>
 </div>
+</div>
+<div class="mb-3">
+        <input type="button" value="Submit Order">
+    </div>
 </body>
 </html>
