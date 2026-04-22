@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using FUMCFoodPantry.Models.Enums;
 
 public class User
 {
@@ -14,7 +15,7 @@ public class User
     public string MiddleName { get; set; }
 
     [Required]
-    public string Role { get; set; }
+    public UserRole Role { get; set; }
 
     public DateTime DateJoined { get; set; }
 
