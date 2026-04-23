@@ -16,22 +16,128 @@
 
 <div class="col text-left p-3">
     <div class="mb-3">
-        <input type="lastName" placeholder="Last Name">
-        <input type="firstName" placeholder="First Name">
-        <input type="middle" placeholder="Middle">
+        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Middle">
+    </div>
+    <div class="d-flex">
+        <p>Do you have a fixed address?</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="yes" value="yes" name="fixedAddress"/> 
+            <label for="yes" style="text-align: center; margin-right: 10px;">Yes</label>
+            <input type="radio" id="no" value="no" name="fixedAddress"/>
+            <label for="no" style="text-align: center; margin-right: 10px;">No</label>
+        </div>
     </div>
     <div class="mb-3">
-        <input type="address" placeholder="Address">
-        <input type="city" placeholder="City">
-        <input type="state" placeholder="State">
-        <input type="zip" placeholder="Zip Code">
+        <input type="text" placeholder="Address">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="State">
+        <input type="text" placeholder="Zip Code">
+        <input type="text" placeholder="County">
     </div>
     <div class="mb-3">
-        <input type="phone" placeholder="Phone #"> 
+        <input type="tel" placeholder="Phone #"> 
+    </div>
+    <div class="mb-3 d-flex">
+        <p>Date of Birth:</p>
+        <input type="date" style="margin-left: 10px; height: 30px;"> 
+    </div>
+    <div class="d-flex">
+        <p>What is your employment status?</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="fullTime" value="yes" name="employmentStatus"/> 
+            <label for="fullTime" style="text-align: center; margin-right: 10px;">Full time</label>
+            <input type="radio" id="partTime" value="partTime" name="employmentStatus"/>
+            <label for="partTime" style="text-align: center; margin-right: 10px;">Part time</label>
+            <input type="radio" id="unemployed" value="unemployed" name="employmentStatus"/>
+            <label for="unemployed" style="text-align: center; margin-right: 10px;">Unemployed</label>
+            <input type="radio" id="retired" value="retired" name="employmentStatus"/>
+            <label for="retired" style="text-align: center; margin-right: 10px;">Retired</label>
+            <input type="radio" id="disabled" value="disabled" name="employmentStatus"/>
+            <label for="disabled" style="text-align: center; margin-right: 10px;">Disabled</label>
+        </div>
+    </div>
+    <div class="mb-3 d-flex">
+        <p>What is your current housing status?</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="own" value="own" name="housingStatus"/>
+            <label for="own" style="text-align: center; margin-right: 10px;">Own</label>
+            <input type="radio" id="rent" value="rent" name="housingStatus"/>
+            <label for="rent" style="text-align: center; margin-right: 10px;">Rent</label>
+            <input type="radio" id="homeless" value="homeless" name="housingStatus"/>
+            <label for="homeless" style="text-align: center; margin-right: 10px;">Homeless</label>
+            <input type="radio" id="transient" value="transient" name="housingStatus"/>
+            <label for="transient" style="text-align: center; margin-right: 10px;">Transient</label>
+            <input type="radio" id="atRisk" value="atRisk" name="housingStatus"/>
+            <label for="atRisk" style="text-align: center; margin-right: 10px;">At Risk of Being Homeless</label>
+        </div>
+    </div>
+    <div class="d-flex">
+        <p>Are you the primary contact for your household?</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="yes" value="yes" name="primaryContact"/> 
+            <label for="yes" style="text-align: center; margin-right: 10px;">Yes</label>
+            <input type="radio" id="no" value="no" name="primaryContact"/>
+            <label for="no" style="text-align: center; margin-right: 10px;">No</label>
+        </div>
+    </div>
+    <div class="d-flex">
+        <p>What is your gender? (Self-Identified)</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="female" value="female" name="gender"/> 
+            <label for="female" style="text-align: center; margin-right: 10px;">Female</label>
+            <input type="radio" id="male" value="male" name="gender"/>
+            <label for="male" style="text-align: center; margin-right: 10px;">Male</label>
+            <input type="radio" id="nonBinary" value="nonBinary" name="gender"/>
+            <label for="nonBinary" style="text-align: center; margin-right: 10px;">Non-Binary</label>
+            <input type="radio" id="other" value="other" name="gender"/>
+            <label for="other" style="text-align: center; margin-right: 10px;">Other</label>
+            <input type="radio" id="preferNotToSay" value="preferNotToSay" name="gender"/>
+            <label for="preferNotToSay" style="text-align: center; margin-right: 10px;">Prefer not to say</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <p>What is your race? (Choose all that apply)</p>
+        <div style="margin-left: 10px;">
+            <input type="checkbox" id="white" value="white" name="race"/> 
+            <label for="white" style="text-align: center; margin-right: 10px;">White</label>
+            <input type="checkbox" id="black" value="black" name="race"/>
+            <label for="black" style="text-align: center; margin-right: 10px;">Black or African American</label>
+            <input type="checkbox" id="asian" value="asian" name="race"/>
+            <label for="asian" style="text-align: center; margin-right: 10px;">Asian</label>
+            <input type="checkbox" id="hispanic" value="hispanic" name="race"/>
+            <label for="hispanic" style="text-align: center; margin-right: 10px;">Hispanic, Latino, or Spanish</label>
+            <input type="checkbox" id="nativeAmerican" value="nativeAmerican" name="race"/>
+            <label for="nativeAmerican" style="text-align: center; margin-right: 10px;">Native American or Alaska Native</label>
+            <input type="checkbox" id="middleEastern" value="middleEastern" name="race"/>
+            <label for="middleEastern" style="text-align: center; margin-right: 10px;">Middle Eastern or North African</label>
+            <input type="checkbox" id="marshallese" value="marshallese" name="race"/>
+            <label for="marshallese" style="text-align: center; margin-right: 10px;">Marshallese</label>
+            <input type="checkbox" id="hawaiian" value="hawaiian" name="race"/>
+            <label for="hawaiian" style="text-align: center; margin-right: 10px;">Native Hawaiian/Other Pacific Islander</label>
+            <input type="checkbox" id="other" value="other" name="race"/>
+            <label for="other" style="text-align: center; margin-right: 10px;">Other Race or Ethnicity</label>
+            <input type="checkbox" id="preferNotToSay" value="preferNotToSay" name="race"/>
+            <label for="preferNotToSay" style="text-align: center; margin-right: 10px;">Prefer not to say</label>
+        </div>
+    </div>
+    <div class="d-flex">
+        <p>Select all that apply to your household.</p>
+        <div style="margin-left: 10px;">
+            <input type="checkbox" id="singleParent" value="singleParent" name="household"/> 
+            <label for="singleParent" style="text-align: center; margin-right: 10px;">Single Parent</label>
+            <input type="checkbox" id="adultAlone" value="adultAlone" name="household"/>
+            <label for="adultAlone" style="text-align: center; margin-right: 10px;">Adult Living Alone</label>
+            <input type="checkbox" id="disabled" value="disabled" name="household"/>
+            <label for="disabled" style="text-align: center; margin-right: 10px;">Disabled Household</label>
+            <input type="checkbox" id="multigenerational" value="multigenerational" name="household"/>
+            <label for="multigenerational" style="text-align: center; margin-right: 10px;">Multi-Generational Household</label>
+        </div>
     </div>
     <div class="mb-3 d-flex">
         <p>How many Household members are employed?</p>
-        <input type="numEmployed" style="width: 50px; height: 30px; margin-left: 10px;">
+        <input type="number" style="width: 50px; height: 30px; margin-left: 10px;">
     </div>
     <p>[[Work in Progress...]]</p>
 </div>
