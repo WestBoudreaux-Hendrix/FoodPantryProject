@@ -1,6 +1,6 @@
 @page
 @using RazorPagesMovie.Pages
-@model StaffLogInModel
+@model ApplicationModel
 @{
     ViewData["Title"] = "Application for Assistance";
 }
@@ -9,17 +9,29 @@
     <title>Application for Assistance</title>
 </head>
 
+<style>
+.appSect {
+  border-width:2px; 
+  border-style:solid; 
+  border-color: #999;
+  padding: 30px;
+}
+</style>
+
 <body>
     <div class="container-fluid pt-5 text-center">
     <h3>@ViewData["Title"]</h3>
     </div>
 
 <div class="col text-left p-3">
-    <div class="mb-3">
+    <b>1. Name</b>
+    <div class="mb-3 appSect">
         <input type="text" placeholder="Last Name">
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Middle">
     </div>
+    <b>2. Address</b>
+    <div class="mb-3 appSect">
     <div class="d-flex">
         <p>Do you have a fixed address?</p>
         <div style="margin-left: 10px;">
@@ -36,6 +48,9 @@
         <input type="text" placeholder="Zip Code">
         <input type="text" placeholder="County">
     </div>
+    </div>
+    <b>3. Personal Information</b>
+    <div class="mb-3 appSect">
     <div class="mb-3">
         <input type="tel" placeholder="Phone #"> 
     </div>
@@ -43,7 +58,7 @@
         <p>Date of Birth:</p>
         <input type="date" style="margin-left: 10px; height: 30px;"> 
     </div>
-    <div class="d-flex">
+    <div class="mb-3 d-flex">
         <p>What is your employment status?</p>
         <div style="margin-left: 10px;">
             <input type="radio" id="fullTime" value="yes" name="employmentStatus"/> 
@@ -73,7 +88,7 @@
             <label for="atRisk" style="text-align: center; margin-right: 10px;">At Risk of Being Homeless</label>
         </div>
     </div>
-    <div class="d-flex">
+    <div class="mb-3 d-flex">
         <p>Are you the primary contact for your household?</p>
         <div style="margin-left: 10px;">
             <input type="radio" id="yes" value="yes" name="primaryContact"/> 
@@ -82,7 +97,7 @@
             <label for="no" style="text-align: center; margin-right: 10px;">No</label>
         </div>
     </div>
-    <div class="d-flex">
+    <div class="mb-3 d-flex">
         <p>What is your gender? (Self-Identified)</p>
         <div style="margin-left: 10px;">
             <input type="radio" id="female" value="female" name="gender"/> 
@@ -122,6 +137,9 @@
             <label for="preferNotToSay" style="text-align: center; margin-right: 10px;">Prefer not to say</label>
         </div>
     </div>
+    </div>
+    <b>4. Household Information</b>
+    <div class="mb-3 appSect">
     <div class="d-flex">
         <p>Select all that apply to your household.</p>
         <div style="margin-left: 10px;">
@@ -164,10 +182,65 @@
             <label for="no" style="text-align: center; margin-right: 10px;">No</label>
         </div>
     </div>
-    <div class="mb-3 d-flex">
-        <p>How many Household members are employed?</p>
-        <input type="number" style="width: 50px; height: 30px; margin-left: 10px;">
+    <div class="mb-3">
+        <p>Does anyone in your household recieve SNAP (food stamps)?</p>
+        <div style="margin-left: 10px;">
+            <input type="radio" id="yes" value="yes" name="snap"/> 
+            <label for="yes" style="text-align: center; margin-right: 10px;">Yes</label>
+            <input type="radio" id="no" value="no" name="snap"/>
+            <label for="no" style="text-align: center; margin-right: 10px;">No</label>
+        </div>
     </div>
-    <p>[[Work in Progress...]]</p>
+    <div class="mb-3">
+        <p>Please list all members living in the household (excluding yourself).</p>
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="First and Last Name">
+        <input type="text" placeholder="Birth Date (MM/DD/YYYY)">
+        <input type="text" placeholder="Ethnicity">
+        <input type="text" placeholder="Gender">
+        <input type="text" placeholder="Relationship to You">
+        <input type="text" placeholder="Income (Amount)">
+    </div>
+    </div>
+    <input type="button" value="Done">
 </div>
 </body>
