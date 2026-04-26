@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FUMCFoodPantry.Data;
+using FUMCFoodPantry.Models.Enums;
+
 
 namespace FUMCFoodPantry.Pages.Users
 {
