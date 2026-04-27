@@ -7,6 +7,7 @@ public class NewUserPageModel : PageModel
 {
     public void OnGet()
     {
-
     }
 }
+
+
