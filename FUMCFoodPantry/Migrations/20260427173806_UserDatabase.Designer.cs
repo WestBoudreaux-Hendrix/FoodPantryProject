@@ -3,6 +3,7 @@ using System;
 using FUMCFoodPantry.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FUMCFoodPantry.Migrations
 {
     [DbContext(typeof(FUMCFoodPantryContext))]
-    partial class FUMCFoodPantryContextModelSnapshot : ModelSnapshot
+    [Migration("20260427173806_UserDatabase")]
+    partial class UserDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.6");
@@ -91,14 +94,10 @@ namespace FUMCFoodPantry.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<DateTime>("Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("County")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -113,94 +112,114 @@ namespace FUMCFoodPantry.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly?>("Family1Birthday")
+                    b.Property<DateTime>("Family1Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family1Ethnicity")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family1Gender")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Family1Income")
+                    b.Property<int>("Family1Income")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Family1Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family1Relationship")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly?>("Family2Birthday")
+                    b.Property<DateTime>("Family2Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family2Ethnicity")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family2Gender")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Family2Income")
+                    b.Property<int>("Family2Income")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Family2Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family2Relationship")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly?>("Family3Birthday")
+                    b.Property<DateTime>("Family3Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family3Ethnicity")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family3Gender")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Family3Income")
+                    b.Property<int>("Family3Income")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Family3Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family3Relationship")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly?>("Family4Birthday")
+                    b.Property<DateTime>("Family4Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family4Ethnicity")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family4Gender")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Family4Income")
+                    b.Property<int>("Family4Income")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Family4Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family4Relationship")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly?>("Family5Birthday")
+                    b.Property<DateTime>("Family5Birthday")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family5Ethnicity")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family5Gender")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Family5Income")
+                    b.Property<int>("Family5Income")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Family5Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Family5Relationship")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
@@ -238,9 +257,8 @@ namespace FUMCFoodPantry.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Phone")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PrimaryContact")
                         .IsRequired()

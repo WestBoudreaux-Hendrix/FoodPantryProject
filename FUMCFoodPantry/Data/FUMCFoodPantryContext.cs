@@ -22,6 +22,7 @@ namespace FUMCFoodPantry.Data
             modelBuilder.Entity<User>().Property(u => u.Role).HasConversion<string>();
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<UserApplications> UserApplications { get; set; } = default!;
         //I added this section to convert the enums from integers to strings - Jeffrey
     }
 }
