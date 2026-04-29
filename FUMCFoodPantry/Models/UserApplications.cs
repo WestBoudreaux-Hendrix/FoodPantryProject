@@ -15,7 +15,7 @@ public class UserApplications
     [Required]
     public String FixedAddress { get; set;}
     [Required]
-    public String Address { get; set;}
+    public String City { get; set;}
     [Required]
     [StringLength(2, MinimumLength = 2)]
     [RegularExpression("^[A-Z]{2}$", ErrorMessage = "State must be a valid 2-letter abbreviation.")]
