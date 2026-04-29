@@ -90,7 +90,7 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
     _context.UserApplications.Add(UserApplications);
     await _context.SaveChangesAsync();
-    return RedirectToPage("./Index");
+    return RedirectToPage("Pages/Index");
 }
     }
 }

@@ -90,7 +90,7 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
     _context.UserApplications.Add(UserApplications);
     await _context.SaveChangesAsync();
-    return RedirectToPage("https://conwayfumc.org/umc-resources/");
+    return RedirectToPage("/Index");
 }
     }
 }
