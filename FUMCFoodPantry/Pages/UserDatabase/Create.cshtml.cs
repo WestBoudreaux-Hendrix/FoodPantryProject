@@ -20,6 +20,12 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
         public IActionResult OnGet()
         {
+
+            UserApplications = new UserApplications
+            {
+                MemberId = GenerateUniqueMemberId()
+            };
+
             EmploymentOptions = new List<SelectListItem>
         {
             new SelectListItem { Value = "Full Time", Text = "Full Time" },
@@ -50,6 +56,17 @@ namespace FUMCFoodPantry.Pages.UserDatabase
             new SelectListItem { Value = "Prefer not to say", Text = "Prefer not to say" }
         };
             return Page();
+        }
+
+        private int GenerateUniqueMemberId()
+        {
+            int id;
+            do
+            {
+                id = Random.Shared.Next(100000, 999999);
+            }
+            while (_context.UserApplications.Any(u => u.MemberId == id));
+            return id;
         }
 
         [BindProperty]
@@ -88,17 +105,6 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
         return Page();
     }
-
-    bool exists;
-    do
-            {
-                UserApplications.MemberId = Random.Shared.Next(100000, 999999);
-
-                exists = _context.UserApplications.Any(u => u.MemberId == UserApplications.MemberId);
-            }while (exists);
-
-            
-
     
 
     _context.UserApplications.Add(UserApplications);
