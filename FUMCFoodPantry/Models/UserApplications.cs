@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
+[Index(nameof(MemberId), IsUnique = true)]
 public class UserApplications
 {
     public int Id { get; set; }
@@ -22,7 +24,7 @@ public class UserApplications
     public string State { get; set;}
     [Required]
     public int Zip { get; set;}
-      [Required]
+    [Required]
     public string County { get; set;}
     [Required]
     public string Phone { get; set;}

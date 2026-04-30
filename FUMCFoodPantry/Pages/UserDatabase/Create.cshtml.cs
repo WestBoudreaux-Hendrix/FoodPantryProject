@@ -73,6 +73,7 @@ namespace FUMCFoodPantry.Pages.UserDatabase
         public async Task<IActionResult> OnPostAsync()
 {
 
+
     UserApplications.Race = string.Join(", ", SelectedRace);
     UserApplications.Household = string.Join(", ", SelectedHousehold);
 
@@ -87,6 +88,18 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
         return Page();
     }
+
+    bool exists;
+    do
+            {
+                UserApplications.MemberId = Random.Shared.Next(100000, 999999);
+
+                exists = _context.UserApplications.Any(u => u.MemberId == UserApplications.MemberId);
+            }while (exists);
+
+            
+
+    
 
     _context.UserApplications.Add(UserApplications);
     await _context.SaveChangesAsync();
