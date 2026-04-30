@@ -136,8 +136,9 @@
                  <label>@category</label>}
                 <span asp-validation-for="UserApplications.Household" class="text-danger"></span>
 
-                <span class="text-danger">*</span>
+                
                 <label asp-for="UserApplications.Disability" class="control-label">Does anyone in your household, including yourself, have a disability that prevents them from accepting any kind of work during the next 6 months?</label>
+                <span class="text-danger">*</span>
                 <select asp-for="UserApplications.Disability" asp-items="Model.YesOrNoOptions" class="form-control" aria-required="true">
                 <option value=""> -- Please Select -- </option>
                 </select>
