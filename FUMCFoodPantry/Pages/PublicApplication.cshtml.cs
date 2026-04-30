@@ -20,6 +20,12 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
         public IActionResult OnGet()
         {
+
+            UserApplications = new UserApplications
+            {
+                MemberId = GenerateUniqueMemberId()
+            };
+
             EmploymentOptions = new List<SelectListItem>
         {
             new SelectListItem { Value = "Full Time", Text = "Full Time" },
@@ -51,6 +57,20 @@ namespace FUMCFoodPantry.Pages.UserDatabase
         };
             return Page();
         }
+
+        
+    private int GenerateUniqueMemberId()
+    {
+        int id;
+        do
+        {
+            id = Random.Shared.Next(100000, 999999);
+        }
+        while (_context.UserApplications.Any(u => u.MemberId == id));
+
+        return id;
+    }
+
 
         [BindProperty]
         public UserApplications UserApplications { get; set; } = default!;
@@ -90,7 +110,7 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
     _context.UserApplications.Add(UserApplications);
     await _context.SaveChangesAsync();
-    return RedirectToPage("https://conwayfumc.org/umc-resources/");
+    return RedirectToPage("/Index");
 }
     }
 }
