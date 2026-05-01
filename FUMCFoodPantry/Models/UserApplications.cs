@@ -6,7 +6,7 @@ public class UserApplications
 {
     public int Id { get; set; }
     public int MemberId { get; set;}
-    public DateTime Date { get; set;}
+    public DateTime Date { get; set;} = DateTime.Now;
     [Required]
     public string FirstName { get; set;}
     public string? MiddleName { get; set;}
