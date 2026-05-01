@@ -30,30 +30,30 @@ namespace FUMCFoodPantry.Pages.UserDatabase
         {
             new SelectListItem { Value = "Full Time", Text = "Jornada completa" },
             new SelectListItem { Value = "Part Time", Text = "Tiempo parcial" },
-            new SelectListItem { Value = "Unemployed", Text = "Unemployed" },
-            new SelectListItem { Value = "Retired", Text = "Retired" },
-            new SelectListItem { Value = "Disabled", Text = "Disabled" },
+            new SelectListItem { Value = "Unemployed", Text = "Desempleados" },
+            new SelectListItem { Value = "Retired", Text = "Jubilado" },
+            new SelectListItem { Value = "Disabled", Text = "Desactivado" },
         };
         HousingOptions = new List<SelectListItem>
         {
-            new SelectListItem { Value = "Own", Text = "Own" },
-            new SelectListItem { Value = "Rent", Text = "Rent" },
-            new SelectListItem { Value = "Homeless", Text = "Homeless" },
-            new SelectListItem { Value = "Transient", Text = "Transient" },
-            new SelectListItem { Value = "At Risk of Being Homeless", Text = "At Risk of Being Homeless" },
+            new SelectListItem { Value = "Own", Text = "Propio" },
+            new SelectListItem { Value = "Rent", Text = "Alquilar" },
+            new SelectListItem { Value = "Homeless", Text = "Sin hogar" },
+            new SelectListItem { Value = "Transient", Text = "Transitorio" },
+            new SelectListItem { Value = "At Risk of Being Homeless", Text = "En riesgo de quedarse sin hogar" },
         };
         YesOrNoOptions = new List<SelectListItem>
         {
-            new SelectListItem { Value = "Yes", Text = "Yes" },
+            new SelectListItem { Value = "Yes", Text = "Sí" },
             new SelectListItem { Value = "No", Text = "No" }
         };
         GenderOptions = new List<SelectListItem>
         {
-            new SelectListItem { Value = "Female", Text = "Female" },
-            new SelectListItem { Value = "Male", Text = "Male" },
-            new SelectListItem { Value = "Non-Binary", Text = "Non-Binary" },
-            new SelectListItem { Value = "Other", Text = "Other" },
-            new SelectListItem { Value = "Prefer not to say", Text = "Prefer not to say" }
+            new SelectListItem { Value = "Female", Text = "Femenino" },
+            new SelectListItem { Value = "Male", Text = "Masculino" },
+            new SelectListItem { Value = "Non-Binary", Text = "No binario" },
+            new SelectListItem { Value = "Other", Text = "Otro" },
+            new SelectListItem { Value = "Prefer not to say", Text = "Prefiero no decirlo" }
         };
             return Page();
         }
@@ -84,11 +84,11 @@ namespace FUMCFoodPantry.Pages.UserDatabase
 
         public List<string> SelectedRace { get; set; } = new();
 
-        public List<string> AvailableRaces { get; set; } = new() { "White", "Black or African American", "Asian", "Hispanic, Latino, or Spanish", "Native American of Alaska Native", "Middle Eastern or North Africa", "Marshallese", "Native Hawaiian/Other Pacific", "Other Race or Ethnicity", "Prefer Not To Say"};
+        public List<string> AvailableRaces { get; set; } = new() { "Blanco", "Negro o afroamericano", "Asiático", "Hispano, latino o de origen español", "Nativo americano o nativo de Alaska", "De Oriente Medio o del norte de África", "Marshallés", "Nativo hawaiano u otro isleño del Pacífico", "Otra raza o etnia", "Prefiero no decirlo"};
 
         public List<string> SelectedHousehold { get; set; } = new();
 
-        public List<string> AvailableHousehold { get; set; } = new() { "Single Parent", "Adult Living Alone", "Disabled Household", "Milti-Generational Household"};
+        public List<string> AvailableHousehold { get; set; } = new() { "Padre o madre soltero/a", "Adulto que vive solo", "Hogar discapacitado", "Hogar multigeneracional"};
 
         public async Task<IActionResult> OnPostAsync()
 {
