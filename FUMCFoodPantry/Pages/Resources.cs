@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FUMCFoodPantry.Pages;
 
-public class TestModel : PageModel
+public class ResourcesModel : PageModel
 {
     public void OnGet()
     {
